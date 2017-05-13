@@ -1,0 +1,9 @@
+﻿.nav .open>a, .nav .open>a:hover, .nav .open>a:focus {
+    border: none;
+}
+.navbar-top-links{
+    margin-top:5px;
+}
+.h150{
+    height:150px !important;
+}

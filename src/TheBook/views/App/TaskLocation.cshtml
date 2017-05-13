@@ -1,0 +1,48 @@
+﻿@model TheBook.ViewModels.Stop
+
+@section scripts{
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+}
+<form method="post">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Vị Trí</h1>
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+    <div class="row">
+        <div asp-validation-summary="ModelOnly"></div>
+        <div class="col-sm-12 col-md-6 col-lg-6">
+            <div class="form-group">
+                <label asp-for="Name">Tên trạm</label>
+                <input asp-for="Name" class="form-control" />
+                <span class="text-danger" asp-validation-for="Name"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Longitude">Kinh độ</label>
+                <input asp-for="Longitude" class="form-control" />
+                <span class="text-danger" asp-validation-for="Longitude"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Latitude">Vĩ độ</label>
+                <input asp-for="Latitude" class="form-control" />
+                <span class="text-danger" asp-validation-for="Latitude"></span>
+            </div>
+        </div> 
+        <div class="col-sm-12 col-md-6 col-lg-6">
+            <div class="form-group">
+                <label asp-for="Note">Ghi chú</label>
+                <textarea asp-for="Note" cols="40" rows="5" class="form-control h150"></textarea>
+            </div>
+            <div class="form-group">
+                <input type="submit" class="btn btn-primary" value="Thêm mới" />
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+            <div id="map" style="width:100%;height:400px"></div>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,124 @@
+﻿@{
+    ViewBag.Title = "Home page";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/lib/Font-Awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="~/lib/bootswatch/readable/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/lib/metismenu/dist/metisMenu.min.css" />
+    <link rel="stylesheet" href="~/css/sb-admin-2.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+
+    <title>index - @ViewBag.Title</title>
+</head>
+<body>
+    <div id="wrapper">
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" asp-controller="App" asp-action="Index">Sổ công tác</a>
+            </div>
+            <!-- /.navbar-header -->
+            <ul class="nav navbar-top-links navbar-right">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li>
+                            <a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-user -->
+                </li>
+                <!-- /.dropdown -->
+            </ul>
+            <!-- /.navbar-top-links -->
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <li class="sidebar-search">
+                            <div class="input-group custom-search-form">
+                                <input type="text" class="form-control" placeholder="not available yet..">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default" type="button">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                </span>
+                            </div>
+                            <!-- /input-group -->
+                        </li>
+                        <li>
+                            <a asp-controller="App" asp-action="Index"><i class="fa fa-home fa-fw"></i> Trang chủ</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-tasks fa-fw"></i> Công tác<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a asp-controller="App" asp-action="BusinessDetails"><i class="fa fa-book fa-fw"></i> Thêm mới</a>
+                                </li>
+                                <li>
+                                    <a asp-controller="App" asp-action="TaskLocation"><i class="fa fa-location-arrow fa-fw"></i> Vị trí</a>
+                                </li>
+                                <li>
+                                    <a asp-controller="App" asp-action="MemberAssignment"><i class="fa fa-hand-rock-o fa-fw"></i> Phân công</a>
+                                </li>
+                                <li>
+                                    <a asp-controller="App" asp-action="CarAssignment"><i class="fa fa-paper-plane-o fa-fw"></i> Điều xe</a>
+                                </li>
+                                <li>
+                                    <a asp-controller="App" asp-action="TaskUpdate"><i class="fa fa-upload fa-fw"></i> Cập nhật</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-newspaper-o fa-fw"></i> Báo cáo</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-users fa-fw"></i> Người tham gia<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a asp-controller="App" asp-action="MemberProfile"><i class="fa fa-male fa-fw"></i> Thông tin thành viên</a>
+                                </li>
+                                <li>
+                                    <a asp-controller="App" asp-action="RoleDetails"><i class="fa fa-info fa-fw"></i> Vai trò</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a asp-controller="App" asp-action="CarDetails"><i class="fa fa-car fa-fw"></i> Phương tiện</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+    </div>
+    <div id="page-wrapper">
+        @RenderBody()
+    </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="~/lib/metismenu/dist/metisMenu.min.js"></script>
+    <script src="~/scripts/sb-admin-2.min.js"></script>
+    @RenderSection("scripts",false)
+</body>
+</html>

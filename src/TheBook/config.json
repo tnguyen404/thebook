@@ -1,0 +1,12 @@
+{
+  "MailSettings": {
+    "ToAddress": "tnguyen404@gmail.com"
+  },
+  "connectionString": {
+    "LocalDB": "Server=(localdb)\\MSSQLLocalDB;Database=TheBookDB;Trusted_Connection=true;MultipleActiveResultSets=true;Integrated Security=True;Connect Timeout=30"
+  },
+  "Key": {
+    "BingKey_1": "Ask6o7IOZEjjIcMRrwmKBtnBe0TGt_eEKr2BlIRQYrTHPU5WqSBEPFiBBQNI7mNs",
+    "BingKey_2": "AqUEvNvuUX9ssV2toVCra8Xdpo-Jkdc6ii2_qbd8IVQQg7r4QT5NX8MOO0s6QoX8"
+  }
+}
